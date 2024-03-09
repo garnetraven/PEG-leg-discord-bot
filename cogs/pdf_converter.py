@@ -12,6 +12,9 @@ class PDFConverter(commands.Cog):
         if message.author == self.bot.user:
             return
 
+        if message.channel.id != os.getenv('TARGET_CHANNEL_ID'):
+            return
+
         for attachment in message.attachments:
             if attachment.filename.endswith('.pdf'):
                 await self.convert(message, attachment)
@@ -44,4 +47,3 @@ class PDFConverter(commands.Cog):
 
 async def setup(bot):
     await bot.add_cog(PDFConverter(bot))
-    
