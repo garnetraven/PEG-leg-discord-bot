@@ -12,9 +12,12 @@ class PDFConverter(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
+        print(f"Received message in channel {message.channel.id}") # Debug
         if message.channel.id == int(os.getenv('TARGET_CHANNEL_ID')) and message.attachments:
             for attachment in message.attachments:
+                print(f"Received message in channel {message.channel.id}") # Debug
                 if attachment.filename.lower().endswith('.pdf'):
+                    print(f"PDF attachment detected: {attachment.filename}") # Debug
                     await self.convert_pdf_to_jpeg(message, attachment)
 
     async def convert_pdf_to_jpeg(self, message, attachment):
@@ -28,6 +31,7 @@ class PDFConverter(commands.Cog):
         await message.channel.send(f"Converted PDF: {attachment.filename}", file=discord.File(io.BytesIO(image_bytes), 'converted_image.jpeg'))
 
     def pdf_to_jpeg(self, pdf_content):
+       
         # Convert PDF to JPEG using reportlab library
         pdf_reader = PdfFileReader(io.BytesIO(pdf_content))
         image_bytes = io.BytesIO()

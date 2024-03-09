@@ -13,6 +13,7 @@ async def on_ready():
     print(f'We have logged in as {client.user}')
     await client.tree.sync(guild=discord.Object(id=int(os.getenv('GUILD_ID'))))
 
+
 # Load the PDFConverter cog
 client.load_extension('pdf_converter')
 
