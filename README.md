@@ -28,11 +28,13 @@ Discord bot build for a SoDA discord workshop. Written in python, this is a Disc
 
 ## Usage
 
-1. Set your Discord bot token in a `.env` file:
+1. Set your Discord bot tokens in the `.env` file:
    ```
    DISCORD_BOT_TOKEN=<YOUR_DISCORD_TOKEN>
+   GUILD_ID=<YOUR_GUID_ID>
+   TARGET_CHANNEL_ID=<TARGET_CHANNEL_ID>
    ```
-2. Run the bot:
+3. Run the bot:
    ```
    python bot.py
    ```
