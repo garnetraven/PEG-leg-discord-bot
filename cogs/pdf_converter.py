@@ -14,7 +14,7 @@ class PDFConverter(commands.Cog):
             return
 
         # Check if the message is in the target channel
-        if message.channel.id != os.getenv('TARGET_CHANNEL_ID'):
+        if message.channel.id != int(os.getenv('TARGET_CHANNEL_ID')):
             return
 
         # Check for attachments in the message
