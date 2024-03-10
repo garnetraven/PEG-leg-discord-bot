@@ -36,7 +36,7 @@ Discord bot build for a SoDA discord workshop. Written in python, this is a Disc
    ```
 3. Run the bot:
    ```
-   python bot.py
+   python main.py
    ```
 ## Contributing
 
