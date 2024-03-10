@@ -1,3 +1,4 @@
+![PEGLeg - Discord Bot.](/assets/images/PEGLeg.png)
 # PEGLeg discord bot
 
 Discord bot build for a SoDA discord workshop. Written in python, this is a Discord bot that listens for messages with PDF attachments and converts the PDFs to JPEGs. The images are then sent back to the channel. 
