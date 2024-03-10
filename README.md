@@ -12,7 +12,7 @@ Discord bot build for a SoDA discord workshop. Written in python, this is a Disc
 
 1. Clone this repository:
    ```
-   git clone https://github.com/garnetraven/PEGLeg-Discord-Bot.git
+   git clone https://github.com/garnetraven/PEGLeg-DiscordBot.git
    ```
 3. Install the required Python packages:
    ```
